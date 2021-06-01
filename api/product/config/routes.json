@@ -16,14 +16,7 @@
         "policies": []
       }
     },
-    {
-      "method": "GET",
-      "path": "/shop/overview",
-      "handler": "product.overviewPage",
-      "config": {
-        "policies": []
-      }
-    },
+    
     {
       "method": "GET",
       "path": "/products",
