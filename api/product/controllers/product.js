@@ -21,7 +21,7 @@ module.exports = {
         //console.log("category",category);
         const cat = await strapi.services.category.findOne({name: category});
         //console.log('cat',category,cat.cid);
-        const data = await strapi.connections.default.raw(`SELECT * FROM products where category = ${cat.id}`);
+        const data = await strapi.connections.default.raw(` SELECT * FROM products where category = "${cat.name}" `);
         //console.log('data',JSON.stringify(data));
         return await ctx.render("products_xx",{
             data,
